@@ -326,7 +326,7 @@ body {
   right: 1.5rem;
   padding: 0.75rem;
   border-radius: 9999px;
-  background-color: rgb(31, 72, 153);
+  background-color: rgba(249, 72, 153, 0.6);
   color: white;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   z-index: 50;
@@ -335,15 +335,15 @@ body {
 
 /* 滑鼠滑到按鈕上方時的樣式 (Hover 效果) */
 .back-to-top:hover {
-  background-color: #193b80; 
-  box-shadow: 0 10px 20px -5px rgba(0, 90, 117, 0.3), 0 6px 12px -3px rgba(0, 90, 117, 0.15);
+  background-color: #ff6483; 
+  box-shadow: 0 10px 20px -5px rgba(240, 163, 154, 0.3), 0 6px 12px -3px rgba(240, 163, 154, 0.15);
   transform: translateY(-1px); /* 輕微上移效果，增加互動感 */
 }
 
 /* 按鈕被點擊或按下時的樣式 (Active 效果) */
 .back-to-top:active {
-  background-color: #0f244d; 
-  box-shadow: 0 5px 10px -2px rgba(0, 72, 94, 0.4), 0 2px 4px -1px rgba(0, 72, 94, 0.2); 
+  background-color: #fe3c6f; 
+  box-shadow: 0 5px 10px -2px rgba(227, 82, 73, 0.4), 0 2px 4px -1px rgba(227, 82, 73, 0.2); 
   transform: translateY(0); /* 回到原位，或輕微下壓 */
 }
 .back-to-top.hidden {
@@ -382,7 +382,7 @@ body {
   width: 2.5rem;
   border-radius: 9999px;
   border: 4px solid #e5e7eb;
-  border-top-color: #61d3fe;
+  border-top-color: #ff8097;
   animation: spinner 0.6s linear infinite;
 }
 
@@ -461,7 +461,7 @@ body {
   margin-right: 0px;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #6b7280;
+  color: #000000;
   margin-top: 4px;
   margin-bottom: 4px;
 }
@@ -674,7 +674,7 @@ function createFloatingElements() {
     const duration = Math.random() * 10 + 15; // 15s to 25s
     
     element.className = 'floating-thing';
-    element.textContent = '💙';
+    element.textContent = '🌸';
     element.style.left = `${left}%`;
     element.style.top = `${top}%`;
     element.style.animationDelay = `${delay}s`;
@@ -747,7 +747,7 @@ async function fetchSheetData() {
 
   try {
     // 這裡只需要您的試算表 ID，不需要 API Key
-    const sheetId = '1UrKxxdh8Cw8hkw_iQV9BRJ8gQgMdYCJLMlcU6S51liA'; 
+    const sheetId = '1gfaAURjaBdOeQw878TP5uwXJpl004O3f-qdMNrM1IVo'; 
     
     // 1. Fetch Title Data (分頁: title)
     // 使用 opensheet.elk.sh 讀取標題分頁，與歌曲讀取方式一致
@@ -1287,7 +1287,7 @@ function createSongCard(song) {
   copyButtonContainer.className = 'absolute top-9 right-3';
 
   const copyButton = document.createElement('button');
-  copyButton.className = 'p-2 bg-pink-200 hover:bg-pink-100 hover:text-[#4a8c99] text-[#4a8c99] rounded-full focus:outline-none shadow-md transition-all duration-200 hover:-translate-y-1 active:scale-95';
+  copyButton.className = 'p-2 bg-pink-200 hover:bg-pink-100 hover:text-[#fc8c99] text-[#fc8c99] rounded-full focus:outline-none shadow-md transition-all duration-200 hover:-translate-y-1 active:scale-95';
 
   const copyIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   copyIcon.setAttribute('class', 'h-8 w-8');
