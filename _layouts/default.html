@@ -25,7 +25,7 @@
   
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>💙</title>
+<title>🌸</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -34,7 +34,7 @@ tailwind.config = {
     extend: {
       colors: {
 // 主色調  
-'Blue': {  
+'blue': {  
     50: "#f0f8fa",  // 極淺藍，接近白色
     100: "#e0f5f7", // 柔和淺藍
     200: "#c8e9f0", // 淺藍
@@ -136,7 +136,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #b5c4ed 0%, #625ed6 90%);
+  background: linear-gradient(135deg, #ff747f 0%, #fda7b0 90%);
   z-index: -10;
 }
 
@@ -194,7 +194,7 @@ body {
   right: -3px;
   bottom: -3px;
   border-radius: 0.5rem;
-  background: linear-gradient(45deg, rgba(15, 36, 77, 0), rgba(124, 159, 230, 0.5), rgba(99, 151, 255, 0)); 
+  background: linear-gradient(45deg, rgba(255, 0, 118, 0), rgba(255, 127, 146, 0.5), rgba(255, 160, 204, 0)); 
   z-index: -1;
   animation: searchGlow 2s infinite alternate;
 }
@@ -215,7 +215,7 @@ body {
   letter-spacing: 0.15em;
   margin-left: 0.15em;
   text-align: center;
-  background: linear-gradient(120deg, #1f4899, #193b80, #0f4055); 
+  background: linear-gradient(120deg, #ffffff, #feffd3, #feefbb); 
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -246,7 +246,7 @@ body {
   left: -10px;
   right: -10px;
   bottom: -10px;
-  background: radial-gradient(circle at center, rgba(148, 138, 208, 0.15) 0%, rgba(148, 138, 208, 0) 70%);
+  background: radial-gradient(circle at center, rgba(233, 255, 253, 0.15) 0%, rgba(233, 255, 253, 0) 70%);
   z-index: -1;
   border-radius: 50%;
   filter: blur(8px);
@@ -497,7 +497,7 @@ body {
         id="search-input"
         type="text"
         placeholder="搜尋歌曲、歌手或語言..."
-        class="w-full pr-[58px] sm:pr-[58px] px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-grey-300 focus:outline-none focus:ring-2 focus:ring-Blue-500 text-grey-700 text-sm sm:text-base"
+        class="w-full pr-[58px] sm:pr-[58px] px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-grey-300 focus:outline-none focus:ring-2 focus:ring-pink-500 text-grey-700 text-sm sm:text-base"
       />
       <!-- 清除按鈕 -->
       <button id="search-clear" class="search-clear-button hidden" aria-label="清除搜尋">
@@ -566,7 +566,7 @@ body {
     <p class="text-grey-500 mt-2">請確保Google Sheet格式正確，並且可以公開訪問</p>
     <button
       id="retry-button"
-      class="mt-4 px-4 py-2 bg-Blue-600 text-white rounded-lg hover:bg-Blue-700"
+      class="mt-4 px-4 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700"
     >
       重試
     </button>
@@ -1017,7 +1017,7 @@ function updateLanguageFilterUI() {
   Array.from(languages).sort().forEach(language => {
     const button = document.createElement('button');
     button.className = `px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg bg-grey-100 hover:bg-grey-200 text-grey-700 font-medium text-xs sm:text-sm transition-colors ${
-      currentLanguageFilter === language ? 'bg-Blue-600 text-white hover:bg-Blue-700' : ''
+      currentLanguageFilter === language ? 'bg-pink-600 text-white hover:bg-pink-700' : ''
     }`;
     button.textContent = language;
     button.addEventListener('click', () => {
@@ -1106,10 +1106,10 @@ sortedGroups.forEach(groupName => {
     button.className = `
       px-2 py-1.5 rounded-lg font-medium flex items-center text-base transition-all duration-200
       ${selectedCategories.has(category)
-        ? 'bg-Blue-500 text-grey-100 hover:bg-Blue-600 shadow-md'
+        ? 'bg-pink-500 text-grey-100 hover:bg-pink-600 shadow-md'
         : isDisabled
         ? 'bg-grey-100 text-grey-200 cursor-not-allowed' // 禁用時的樣式
-        : 'bg-Blue-100 hover:bg-Blue-200 text-Blue-700' // 正常樣式
+        : 'bg-pink-100 hover:bg-pink-200 text-pink-700' // 正常樣式
       }
     `;
     
@@ -1129,7 +1129,7 @@ sortedGroups.forEach(groupName => {
         ? 'bg-white/30 text-white'
         : isDisabled
         ? 'bg-grey-200 text-grey-300' // 新增：如果按鈕被禁用，使用灰色樣式
-        : 'bg-Blue-200 text-Blue-800'
+        : 'bg-pink-200 text-pink-800'
       }`;
     countSpan.textContent = count;
     button.appendChild(countSpan);
@@ -1155,7 +1155,7 @@ function updateSelectedCategoriesUI() {
   if (selectedCategories.size > 0) {
     Array.from(selectedCategories).forEach(category => {
       const tag = document.createElement('div');
-      tag.className = 'filter-tag bg-Blue-200 text-Blue-800 cursor-pointer text-xs px-2 py-1 rounded-full flex items-center border-0';
+      tag.className = 'filter-tag bg-pink-200 text-pink-800 cursor-pointer text-xs px-2 py-1 rounded-full flex items-center border-0';
       
       const span = document.createElement('span');
       span.textContent = category;
@@ -1218,7 +1218,7 @@ function updateSongsUI() {
 // 創建歌曲卡片
 function createSongCard(song) {
   const card = document.createElement('div');
-  card.className = `song-card bg-white rounded-lg p-2.5 border-l-4 ${getLanguageColor(song.language)} hover:border-Blue-700 relative transition-all duration-300 hover:-translate-y-1`;
+  card.className = `song-card bg-white rounded-lg p-2.5 border-l-4 ${getLanguageColor(song.language)} hover:border-pink-700 relative transition-all duration-300 hover:-translate-y-1`;
 
   // 標題
   const title = document.createElement('h3');
@@ -1254,8 +1254,8 @@ function createSongCard(song) {
         const tag = document.createElement('span');
         tag.className = `inline-block px-1 py-0.5 text-xs rounded-full mr-1 mb-0.5 cursor-pointer ${
           selectedCategories.has(category)
-            ? 'bg-Blue-200 text-Blue-800 font-medium'
-            : 'bg-Blue-100 text-Blue-800'
+            ? 'bg-pink-200 text-pink-800 font-medium'
+            : 'bg-pink-100 text-pink-800'
         }`;
         tag.textContent = category;
         tag.addEventListener('click', () => {
@@ -1287,7 +1287,7 @@ function createSongCard(song) {
   copyButtonContainer.className = 'absolute top-9 right-3';
 
   const copyButton = document.createElement('button');
-  copyButton.className = 'p-2 bg-Blue-200 hover:bg-Blue-100 hover:text-[#4a8c99] text-[#4a8c99] rounded-full focus:outline-none shadow-md transition-all duration-200 hover:-translate-y-1 active:scale-95';
+  copyButton.className = 'p-2 bg-pink-200 hover:bg-pink-100 hover:text-[#4a8c99] text-[#4a8c99] rounded-full focus:outline-none shadow-md transition-all duration-200 hover:-translate-y-1 active:scale-95';
 
   const copyIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   copyIcon.setAttribute('class', 'h-8 w-8');
@@ -1395,17 +1395,17 @@ function getLanguageColor(language) {
   if (!language) return 'border-grey-500';
 
   const colors = [
-    'border-Blue-500',
-    'border-Blue-500',
+    'border-pink-500',
+    'border-pink-500',
     'border-grey-500',
-    'border-Blue-400',
-    'border-Blue-400',
+    'border-pink-400',
+    'border-pink-400',
     'border-grey-400',
-    'border-Blue-600',
-    'border-Blue-600',
+    'border-pink-600',
+    'border-pink-600',
     'border-grey-600',
-    'border-Blue-700', // 增加一些深色調選擇
-    'border-Blue-700',
+    'border-pink-700', // 增加一些深色調選擇
+    'border-pink-700',
   ];
 
   let hash = 0;
@@ -1422,15 +1422,15 @@ function getLanguageClass(language) {
   if (!language) return 'bg-grey-100 text-grey-800';
 
   const classes = [
-    'bg-Blue-100 text-Blue-800',
-    'bg-Blue-100 text-Blue-800',
-    'bg-Blue-200 text-Blue-800',
-    'bg-Blue-200 text-Blue-800',
-    'bg-Blue-100 text-Blue-700',
-    'bg-Blue-100 text-Blue-700',
-    'bg-Blue-200 text-Blue-700',
-    'bg-Blue-200 text-Blue-700',
-    'bg-Blue-100 text-Blue-900',
+    'bg-pink-100 text-pink-800',
+    'bg-pink-100 text-pink-800',
+    'bg-pink-200 text-pink-800',
+    'bg-pink-200 text-pink-800',
+    'bg-pink-100 text-pink-700',
+    'bg-pink-100 text-pink-700',
+    'bg-pink-200 text-pink-700',
+    'bg-pink-200 text-pink-700',
+    'bg-pink-100 text-pink-900',
   ];
 
   let hash = 0;
